@@ -1,8 +1,9 @@
-//process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding('utf-8');
+process.stdout.write('version - podaje wersję node.js\nlang - podaje język systemowy\n/exit - wyjście\n');
 process.stdin.on('readable', function() {
     // metoda .read() ma za zadanie odczytać co użytkownik podał na wejściu
     var input = process.stdin.read();
-    process.stdout.write('version - podaje wersję node.js\nlang - podaje język systemowy\n/exit - wyjście\n');
+    
     if(input !== null) {
         // teraz jest sens cokolwiek wyświetlać :)
         var instruction = input.toString().trim();
