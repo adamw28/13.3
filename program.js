@@ -8,18 +8,15 @@ process.stdin.on('readable', function() {
         // teraz jest sens cokolwiek wyświetlać :)
         var instruction = input.toString().trim();
         switch (instruction) {
-        	case '/exit': {
+        	case '/exit':
 	        	process.stdout.write('Quitting app!\n');
     	    	process.exit();
-        	}
-        	case 'version': {
+        	case 'version': 
             	console.log(process.version);
             	break;
-        	}
-        	case 'lang': {
+        	case 'lang': 
             	console.log(process.env.lang);
             	break;
-            }
         	default:
             	process.stderr.write('Wrong instruction!\n');
         }
